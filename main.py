@@ -1,9 +1,7 @@
 import discord
 from discord.ext import commands
-from discord.utils import get
 import asyncio
 from config import *
-import datetime
 from tictactoe import *
 
 # makes a bot called "bot" with the "!" prefix

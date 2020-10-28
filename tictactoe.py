@@ -1,3 +1,4 @@
+
 #POSITION
 pos = {
 "pos_1": 0,
@@ -20,7 +21,20 @@ global GAME_BOARD
 GAME_BOARD = [BLANK,BLANK,BLANK,
               BLANK,BLANK,BLANK,
               BLANK,BLANK,BLANK]
+onetoninereal = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "❗"]
+onetonine = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "❗"]
 
+def reset_icons(icon):
+    icon.clear()
+    for x in range(len(onetoninereal)):
+        icon.append(onetoninereal[x])
+    return icon
+
+def remove_icon(icon,reaction):
+    for x in range(len(icon)):
+        if icon[x] == reaction:
+            icon.remove(reaction)
+            return
 
 def check_win(USER_X,USER_O):
     if (GAME_BOARD[pos["pos_1"]] == GAME_BOARD[pos["pos_2"]] == GAME_BOARD[pos["pos_3"]]) and (GAME_BOARD[pos["pos_1"]] != BLANK):
